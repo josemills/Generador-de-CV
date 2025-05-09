@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de CV</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de CV</h1>
+        <p>Para generar y obtener tu currículum completa el siguiente formulario.</p>
+    </header>
+
+    <main class="container">
+        <!-- Seccion formulario -->
+         <section class="form-section">
+            <form class="cv-form">
+                <h2 class="section-title">Información personal</h2>
+                <label class="form-group">
+                    <span class="label-text">Nombres</span>
+                    <input type="text" class="name-input" required/>
+                    <span class="label-text">Apellido Paterno</span>
+                    <input type="text" class="name-input" required/>
+                    <span class="label-text">Apellido Materno</span>
+                    <input type="text" class="name-input"required/>
+                </label>
+                <label class="form-group">
+                    <span class="label-text">Correo electrónico</span>
+                    <input type="email" class="email-input" required/>
+                </label>
+                <label class="form-group">
+                    <span class="label-text">Teléfono</span>
+                    <input type="tel" class="phone-input" required/>
+                </label>
+                <label class="form-group">
+                    <span class="label-text">Presentación</span>
+                    <textarea class="summary-input" rows="6" placeholder="Escribe una breve presentación acerca de ti..."></textarea>
+                </label>
+                <h2 class="section-title">Experiencia laboral</h2>
+                <label class="form-group">
+                    <textarea class="experience-input" rows="4" placeholder="Escribe acerca de tus experiencias laboral">
+                    </textarea>
+                </label>
+                <h2 class="section-title">Educación</h2>
+                <label class="form-group">
+                    <textarea class="education-input" rows="4" placeholder="Formación académica"></textarea>
+                </label>
+                <h2 class="section-title">Habilidades</h2>
+                <label class="form-group">
+                    <textarea class="skills-input" rows="4" placeholder="Ej:virtudes, conocimientos en...etc."></textarea>
+                </label>
+
+                <button type="submit" class="generate-btn">Generar CV</button>
+            </form>
+         </section>
+    </main>
+
+    <form class="cv-form">
+        <!-- Formulario completo -->
+    </form>
+
+    <script src="scripts/main.js"></script>
+    
+</body>
+</html>
