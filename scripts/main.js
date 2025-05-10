@@ -1,18 +1,21 @@
-document.querySelector(".cv-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded',() => {
+  const inputs = document.querySelectorAll("[data-target]");
 
-  const cvData = {
-    nombre: document.querySelectorAll(".name-input")[0].value,
-    apellidoPaterno: document.querySelectorAll(".name-input")[1].value,
-    apellidoMaterno: document.querySelectorAll(".name-input")[2].value,
-    email: document.querySelector(".email-input").value,
-    phone: document.querySelector(".phone-input").value,
-    summary: document.querySelector(".summary-input").value,
-    experience: document.querySelector(".experience-input").value,
-    education: document.querySelector(".education-input").value,
-    skills: document.querySelector(".skills-input").value,
-  };
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const targetId = input.dataset.target;
+      const targetElement = document.getElementById(targetId);
+      
+      
+      if (targetElement) {
+        targetElement.textContent = input.value;
+      }
+    });
+  });
 
-  localStorage.setItem("cvData", JSON.stringify(cvData));
-  window.open("preview.html", "_blank");
+  const form = document.querySelector(".cv-form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("CV listo para descargar");
+  });
 });
