@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded',() => {
   const form = document.querySelector(".cv-form");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    alert("CV listo para descargar");
+   
+    const cvElement = document.getElementById("cv-preview");
+
+    const opt = {
+      margin:         0.5,
+      filename:       'mi_cv.pdf',
+      image:          {type: 'jpeg', quality: 0.98 },
+      html2canvas:    {scale:2},
+      jsPDF:          {unit: 'in', format: 'letter', orientation: 'portrait'}
+    };
+
+    html2pdf().set(opt).from(cvElement).save();
   });
 });
