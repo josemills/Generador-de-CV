@@ -122,6 +122,33 @@ textarea:focus {
   border-bottom: 1px solid #ccc;
 }
 
+.education-item {
+  margin-bottom: 10px;
+}
+
+.education-item input {
+  width: 85%;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.remove-education-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.remove-education-btn svg,
+.remove-education-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 /* Diseño responsive */
 @media (max-width: 1024px) {

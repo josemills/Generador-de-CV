@@ -18,7 +18,7 @@
       <form class="cv-form">
         <h2 class="section-title">Información personal</h2>
         <label class="form-group">
-          <span class="label-text">Nombres</span>
+          <span class="label-text">Nombre(s)</span>
           <input type="text" class="name-input" data-target="cv-name" required/>
           <span class="label-text">Apellido Paterno</span>
           <input type="text" class="last-name1-input" data-target="cv-lastname1" required/>
@@ -37,7 +37,7 @@
         </label>
 
         <label class="form-group">
-          <span class="label-text">Presentación</span>
+          <span class="label-text">Perfil Profesional</span>
           <textarea class="summary-input" data-target="cv-summary" rows="4"></textarea>
         </label>
 
@@ -46,10 +46,14 @@
           <textarea class="experience-input" data-target="cv-experience" rows="4"></textarea>
         </label>
 
-        <h2 class="section-title">Educación</h2>
-        <label class="form-group">
-          <textarea class="education-input" data-target="cv-education" rows="4"></textarea>
-        </label>
+        <h2 class="section-title">Educación y certificados</h2>
+        <div id="education-container">
+          <div class="education-item">
+            <input type="text" class="education-input" placeholder="Ej: Diplomado en Data Science - Universidad X, 2023"/>
+            <button type="button" class="remove-education-btn"></button>
+          </div>
+        </div>
+        <button type="button" class="add-education-btn"> + </button>
 
         <h2 class="section-title">Habilidades</h2>
         <label class="form-group">
@@ -70,7 +74,7 @@
             <span id="cv-lastname2">Apellido</span>
           </h1>
           <div class="cv-contact">
-            <p><span id="cv-email">correo@example.com</span> | <span id="cv-phone">+56 9 9192 7274</span></p>
+            <p><span id="cv-email">correo@example.com</span> | <span id="cv-phone">+56 9 9192 7274</span></p> | <p><span id="cv-page">Sitio Web</span></p>
           </div>
         </div>
 
@@ -87,9 +91,16 @@
         </section>
 
         <section class="cv-section">
+          <h2 class="cv-section-title">Educación y certificados</h2>
+          <ul id="cv-education-list"></ul>
+        </section>
+
+        <section class="cv-section">
           <h2 class="cv-section-title">Habilidades</h2>
           <p id="cv-skills">Ej: Resolución de problemas, liderazgo, manejo de herramientas.</p>
         </section>
+
+
       </div>
     </section>
   </main>
